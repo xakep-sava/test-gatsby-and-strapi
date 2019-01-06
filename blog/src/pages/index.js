@@ -1,9 +1,10 @@
 import React from 'react'
-// import { Link } from 'gatsby'
 import Link from 'gatsby-link'
 
-const IndexPage = ({ data }) => (  
-  <div>
+import Layout from '../components/layout'
+
+const IndexPage = ({ data }) => (
+  <Layout>
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
@@ -18,7 +19,7 @@ const IndexPage = ({ data }) => (
       ))}
     </ul>
     <Link to="/page-2/">Go to page 2</Link>
-  </div>
+  </Layout>
 )
 export default IndexPage
 export const pageQuery = graphql`  

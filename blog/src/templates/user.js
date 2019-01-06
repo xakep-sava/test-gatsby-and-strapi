@@ -1,9 +1,11 @@
-import React from 'react'  
+import React from 'react'
 import Link from 'gatsby-link'
 import { graphql } from 'gatsby';
 
-const UserTemplate = ({ data }) => (  
-  <div>
+import Layout from '../components/layout'
+
+const UserTemplate = ({ data }) => (
+  <Layout>
     <h1>{data.strapiUsers.username}</h1>
     <ul>
       {data.strapiUsers.articles.map(article => (
@@ -15,7 +17,7 @@ const UserTemplate = ({ data }) => (
         </li>
       ))}
     </ul>
-  </div>
+  </Layout>
 )
 export default UserTemplate
 export const query = graphql`  

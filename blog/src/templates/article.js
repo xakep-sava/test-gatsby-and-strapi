@@ -1,13 +1,15 @@
-import React from 'react'  
+import React from 'react'
 import Link from 'gatsby-link'
 import { graphql } from 'gatsby';
 
-const ArticleTemplate = ({ data }) => (  
-  <div>
+import Layout from '../components/layout'
+
+const ArticleTemplate = ({ data }) => (
+  <Layout>
     <h1>{data.strapiArticles.title}</h1>
     <p>by <Link to={`/authors/${data.strapiArticles.author.id}`}>{data.strapiArticles.author.username}</Link></p>
     <p>{data.strapiArticles.content}</p>
-  </div>
+  </Layout>
 )
 export default ArticleTemplate
 export const query = graphql`  
